@@ -1,0 +1,29 @@
+CREATE TABLE "Artist" (
+  "id" INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
+  "name" TEXT
+);
+CREATE TABLE "Genre" (
+  "id" INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
+  "name" TEXT
+);
+CREATE TABLE "Album" (
+  "id" INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
+  "title" TEXT,
+  "artist_id" INTEGER
+);
+CREATE TABLE "Track" (
+  "id" INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
+  "title" TEXT,
+  "album_id" INTEGER,
+  "genre_id" INTEGER,
+  len INTEGER,
+  rating INTEGER,
+  count INTEGER
+);
+
+INSERT INTO Artist(name) values ('Led Zepplin');
+INSERT INTO Artist(name) values ('AC/DC');
+INSERT INTO Genre(name) values ('Metal');
+INSERT INTO Genre(name) values ('Rock');
+INSERT INTO Album(title, artist_id) values ('Who Made Who',2);
+INSERT INTO Album(title, artist_id) values ('IV', 1);
