@@ -1,2 +1,5 @@
 *.pdf
 *Prueba/
+*Databases/
+*geodata/apikey.txt
+*.xlsx
